@@ -164,6 +164,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPL-qx-MBv">
+                                <rect key="frame" x="-3" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="ynD-DG-LFp">
+                                        <barButtonItem key="leftBarButtonItem" title="Return To Menu" id="1UE-QF-mC4">
+                                            <color key="tintColor" red="0.80621430839999997" green="0.29414387949999998" blue="0.25019249869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="returnToMenu:" destination="BYZ-38-t0r" id="gqI-Dk-9ot"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Hunting Method" id="WGZ-S2-s2O">
+                                            <color key="tintColor" red="0.1858071899" green="0.1974239217" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="changeOdds:" destination="BYZ-38-t0r" id="J35-mK-dtp"/>
+                                                <segue destination="lMe-Oj-OlL" kind="presentation" id="aZf-RK-Fbn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPW-Ig-F0u">
                                 <rect key="frame" x="183" y="725" width="211" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -173,25 +194,6 @@
                                     <segue destination="Bxz-Mk-XRj" kind="presentation" identifier="toMenu" id="Muq-OQ-QAZ"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPL-qx-MBv">
-                                <rect key="frame" x="-3" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="ynD-DG-LFp">
-                                        <barButtonItem key="leftBarButtonItem" title="Return To Menu" id="1UE-QF-mC4">
-                                            <connections>
-                                                <action selector="returnToMenu:" destination="BYZ-38-t0r" id="gqI-Dk-9ot"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="WGZ-S2-s2O">
-                                            <color key="tintColor" red="0.80621430839999997" green="0.29414387949999998" blue="0.25019249869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="quitApp:" destination="BYZ-38-t0r" id="VBR-Tf-PEc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.45201297751174285" blue="0.32788828359886835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -207,6 +209,45 @@
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="evr-Wl-MCs"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="133.25892857142856"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="mdd-qx-dgB">
+            <objects>
+                <tableViewController id="lMe-Oj-OlL" customClass="TableViewController" customModule="Shiny_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k0c-qI-CB8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="AFJ-Bt-zFc">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem id="5in-r6-3FY">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Mte-An-TRv">
+                                        <color key="tintColor" red="0.80621430839999997" green="0.29414387949999998" blue="0.25019249869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nlk-TX-DOc">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nlk-TX-DOc" id="cCu-SQ-kXp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lMe-Oj-OlL" id="EjT-sj-6Wh"/>
+                            <outlet property="delegate" destination="lMe-Oj-OlL" id="NtW-FZ-9yr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-V4-FzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="133"/>
         </scene>
     </scenes>
     <resources>

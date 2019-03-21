@@ -10,6 +10,8 @@ import UIKit
 
 class CounterScreen: UIViewController {
 
+    //Action sheet for choosing between hunting methods
+    
     @IBOutlet weak var Counter: UILabel!
     @IBOutlet weak var oddsLabel: UILabel!
     @IBOutlet weak var shinyImage: UIImageView!
@@ -41,6 +43,17 @@ class CounterScreen: UIViewController {
         }
         //shinyImage.image = UIImage.gifImageWithName("Darkrai Shiny")
     }
+    
+    /*@IBAction func changeOdds(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Choose a different hunting method.", message: nil, preferredStyle: .alert)
+        
+       // alert.view. = UIAlertViewStyle.plainTextInput
+        //alert.addAction(understandAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }*/
+    
+    
     func calculateOdds(){
         var chance = 0.0
         /*let game = UserDefaults.standard.string(forKey: "game")
