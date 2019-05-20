@@ -13,21 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //let pokemon = UserDefaults.standard.string(forKey: "pokemon")
-        /*if(pokemon != "" || pokemon != nil){
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            
+        if let i = UserDefaults.standard.object(forKey: "viewIdentifier") as? String {
+            var identifier = ""
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "CounterScreen")
-            
+            identifier = i
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
- */
+        
         return true
     }
 
@@ -52,7 +48,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

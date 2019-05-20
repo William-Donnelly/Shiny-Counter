@@ -14,7 +14,6 @@
 		92D46FBB212C70CC003A5F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D46FB9212C70CC003A5F10 /* Main.storyboard */; };
 		92D46FBD212C70CE003A5F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D46FBC212C70CE003A5F10 /* Assets.xcassets */; };
 		92D46FC0212C70CE003A5F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D46FBE212C70CE003A5F10 /* LaunchScreen.storyboard */; };
-		92E5F51A22206471000739BD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5F51922206471000739BD /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		92D46FBC212C70CE003A5F10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D46FBF212C70CE003A5F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D46FC1212C70CE003A5F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92E5F51922206471000739BD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				92D46FB5212C70CC003A5F10 /* AppDelegate.swift */,
 				92D46FB7212C70CC003A5F10 /* CounterScreen.swift */,
 				92462E1E21AF14C400775052 /* Menu.swift */,
-				92E5F51922206471000739BD /* TableViewController.swift */,
 				92D46FB9212C70CC003A5F10 /* Main.storyboard */,
 				92D46FBC212C70CE003A5F10 /* Assets.xcassets */,
 				92D46FBE212C70CE003A5F10 /* LaunchScreen.storyboard */,
@@ -147,7 +144,6 @@
 				92D46FB8212C70CC003A5F10 /* CounterScreen.swift in Sources */,
 				92462E1F21AF14C400775052 /* Menu.swift in Sources */,
 				92D46FB6212C70CC003A5F10 /* AppDelegate.swift in Sources */,
-				92E5F51A22206471000739BD /* TableViewController.swift in Sources */,
 				9273ABBE21CB3B0600122E6B /* iOSDevCenters+GIF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA79LVTL5J;
 				INFOPLIST_FILE = "Shiny Counter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KA79LVTL5J;
 				INFOPLIST_FILE = "Shiny Counter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
