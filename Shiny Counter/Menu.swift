@@ -48,7 +48,6 @@ class Menu: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         UserDefaults.standard.set(self.restorationIdentifier, forKey: "viewIdentifier")
-        
         pokeSearch.delegate = self
         gameSearch.delegate = self
         gameSearch.isHidden = true
@@ -59,6 +58,11 @@ class Menu: UIViewController, UISearchBarDelegate {
         //normalImage.image = UIImage.gifImageWithName("Darkrai Normal")
         
         super.viewDidLoad()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        pokeSearch.resignFirstResponder()
+        gameSearch.resignFirstResponder()
     }
     
     func indexOf(element: String, array: [String]) -> Int{
